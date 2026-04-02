@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arvind Pharmaceuticals — Global Pharmaceutical Supplier & Exporter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --navy-mid: #12244a;
+    --teal: #0f7c6e;
+    --teal-light: #14a899;
+    --teal-pale: #e6f5f3;
+    --gold: #c8972a;
+    --gold-light: #f0c96e;
+    --white: #ffffff;
+    --off-white: #f8f7f4;
+    --gray-100: #f1efe8;
+    --gray-300: #c8c5bb;
+    --gray-500: #7a7870;
+    --gray-700: #3e3c38;
+    --text: #1a1917;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--text);
+    background: var(--white);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10, 22, 40, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,151,42,0.15);
+    padding: 0 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+  }
+  .nav-brand {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
+  }
+  .nav-logo-mark {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-light) 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 17px; color: white; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .nav-brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+  .nav-brand-name { font-family: var(--font-display); color: white; font-size: 15px; font-weight: 600; letter-spacing: 0.01em; }
+  .nav-brand-sub { font-size: 10px; color: var(--gold-light); letter-spacing: 0.08em; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 6px; }
+  .nav-links a {
+    color: rgba(255,255,255,0.75); font-size: 13.5px; text-decoration: none;
+    padding: 6px 14px; border-radius: 6px; transition: var(--transition);
+    letter-spacing: 0.01em;
+  }
+  .nav-links a:hover { color: white; background: rgba(255,255,255,0.08); }
+  .nav-links a.active { color: var(--gold-light); }
+  .nav-cta {
+    background: var(--teal); color: white !important; border-radius: 8px !important;
+    padding: 8px 18px !important; font-weight: 500;
+    transition: var(--transition) !important;
+  }
+  .nav-cta:hover { background: var(--teal-light) !important; color: white !important; }
+  .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+  .nav-hamburger span {
+    display: block; width: 22px; height: 2px; background: white;
+    margin: 4px 0; transition: var(--transition); border-radius: 2px;
+  }
+
+  /* ─── HERO ─── */
+  #home {
+    min-height: 100vh;
+    background: var(--navy);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center;
+    padding: 100px 5vw 80px;
+  }
+  .hero-bg-pattern {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 75% 30%, rgba(15,124,110,0.18) 0%, transparent 50%),
+      radial-gradient(circle at 20% 70%, rgba(200,151,42,0.08) 0%, transparent 40%);
+  }
+  .hero-grid-lines {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 700px; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(15,124,110,0.2); border: 1px solid rgba(15,124,110,0.4);
+    color: var(--teal-light); font-size: 12px; letter-spacing: 0.12em;
+    text-transform: uppercase; padding: 6px 14px; border-radius: 20px;
+    margin-bottom: 28px;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--teal-light); flex-shrink: 0;
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5.5vw, 64px);
+    color: white; line-height: 1.12; font-weight: 700;
+    margin-bottom: 24px; letter-spacing: -0.01em;
+  }
+  .hero-title em { color: var(--gold-light); font-style: normal; }
+  .hero-desc {
+    font-size: 17px; color: rgba(255,255,255,0.68); line-height: 1.75;
+    max-width: 560px; margin-bottom: 40px; font-weight: 300;
+  }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 56px; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--teal); color: white; padding: 14px 28px;
+    border-radius: 10px; text-decoration: none; font-size: 15px; font-weight: 500;
+    transition: var(--transition); border: none; cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.85);
+    padding: 14px 28px; border-radius: 10px; text-decoration: none;
+    font-size: 15px; font-weight: 500; transition: var(--transition);
+  }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.06); }
+  .hero-stats { display: flex; flex-wrap: wrap; gap: 32px; }
+  .hero-stat { }
+  .hero-stat-num {
+    font-family: var(--font-display); font-size: 32px; font-weight: 700;
+    color: white; line-height: 1;
+  }
+  .hero-stat-num span { color: var(--gold-light); }
+  .hero-stat-label { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .hero-visual {
+    position: absolute; right: 5vw; top: 50%; transform: translateY(-50%);
+    width: min(400px, 40vw);
+    opacity: 0.12;
+  }
+  .hero-visual svg { width: 100%; height: auto; }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 96px 5vw; }
+  .section-eyebrow {
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--teal); font-weight: 600; margin-bottom: 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .section-eyebrow::before {
+    content: ''; width: 20px; height: 2px; background: var(--teal); border-radius: 2px;
+  }
+  .section-title {
+    font-family: var(--font-display); font-size: clamp(28px, 3.5vw, 44px);
+    color: var(--navy); line-height: 1.2; font-weight: 700; margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .section-subtitle {
+    font-size: 16px; color: var(--gray-500); max-width: 600px;
+    line-height: 1.7; margin-bottom: 56px;
+  }
+
+  /* ─── WHY US ─── */
+  #why { background: var(--off-white); }
+  .why-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .why-card {
+    background: white; border-radius: 16px;
+    border: 1px solid var(--gray-100); padding: 32px 28px;
+    transition: var(--transition); position: relative; overflow: hidden;
+  }
+  .why-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: linear-gradient(90deg, var(--teal), var(--teal-light));
+    transform: scaleX(0); transform-origin: left; transition: var(--transition);
+  }
+  .why-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+  .why-card:hover::before { transform: scaleX(1); }
+  .why-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    background: var(--teal-pale); display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px; font-size: 20px;
+  }
+  .why-card h3 { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+  .why-card p { font-size: 14.5px; color: var(--gray-500); line-height: 1.65; }
+
+  /* ─── ABOUT ─── */
+  #about { background: white; }
+  .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .about-visual {
+    position: relative;
+  }
+  .about-img-block {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    border-radius: 20px; padding: 48px; color: white;
+    position: relative; overflow: hidden; min-height: 400px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .about-img-block::before {
+    content: ''; position: absolute; top: -40px; right: -40px;
+    width: 200px; height: 200px; border-radius: 50%;
+    background: rgba(15,124,110,0.2);
+  }
+  .about-img-block::after {
+    content: ''; position: absolute; bottom: -30px; left: -30px;
+    width: 150px; height: 150px; border-radius: 50%;
+    background: rgba(200,151,42,0.12);
+  }
+  .about-img-quote {
+    font-family: var(--font-display); font-size: 22px; color: white;
+    line-height: 1.5; position: relative; z-index: 1;
+  }
+  .about-img-quote em { color: var(--gold-light); font-style: normal; }
+  .about-img-attribution { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 12px; position: relative; z-index: 1; }
+  .about-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(15,124,110,0.25); border: 1px solid rgba(15,168,153,0.3);
+    color: var(--teal-light); padding: 6px 14px; border-radius: 8px;
+    font-size: 12px; font-weight: 500; position: relative; z-index: 1;
+  }
+  .about-values { list-style: none; margin-top: 28px; display: flex; flex-direction: column; gap: 14px; }
+  .about-value {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 16px 20px; border-radius: 12px; background: var(--teal-pale);
+    border-left: 3px solid var(--teal);
+  }
+  .about-value-icon { font-size: 16px; margin-top: 1px; flex-shrink: 0; }
+  .about-value h4 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+  .about-value p { font-size: 13px; color: var(--gray-500); }
+  .management-card {
+    display: flex; align-items: flex-start; gap: 16px; margin-top: 32px;
+    padding: 20px 24px; border-radius: 14px; border: 1px solid var(--gray-100);
+    background: var(--off-white);
+  }
+  .mgmt-avatar {
+    width: 52px; height: 52px; border-radius: 12px; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--teal), var(--teal-light));
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 18px; color: white; font-weight: 700;
+  }
+  .mgmt-info h4 { font-family: var(--font-display); font-size: 17px; color: var(--navy); font-weight: 600; }
+  .mgmt-info p { font-size: 13px; color: var(--teal); font-weight: 500; }
+  .mgmt-info .mgmt-bio { font-size: 13.5px; color: var(--gray-500); margin-top: 8px; line-height: 1.6; }
+
+  /* ─── PRODUCTS ─── */
+  #products { background: var(--navy); }
+  #products .section-eyebrow { color: var(--teal-light); }
+  #products .section-eyebrow::before { background: var(--teal-light); }
+  #products .section-title { color: white; }
+  #products .section-subtitle { color: rgba(255,255,255,0.55); }
+  .product-categories {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
+    margin-bottom: 40px;
+  }
+  .prod-cat-btn {
+    background: rgba(255,255,255,0.06); border: none; cursor: pointer;
+    color: rgba(255,255,255,0.6); font-family: var(--font-body);
+    font-size: 13px; padding: 12px 16px; transition: var(--transition);
+  }
+  .prod-cat-btn:first-child { border-radius: 10px 0 0 10px; }
+  .prod-cat-btn:last-child { border-radius: 0 10px 10px 0; }
+  .prod-cat-btn.active, .prod-cat-btn:hover {
+    background: var(--teal); color: white;
+  }
+  .products-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  .product-chip {
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px; padding: 18px 20px;
+    transition: var(--transition); cursor: default;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .product-chip:hover { background: rgba(15,124,110,0.25); border-color: rgba(15,168,153,0.4); }
+  .prod-chip-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--teal-light); flex-shrink: 0;
+  }
+  .product-chip span { color: rgba(255,255,255,0.85); font-size: 14px; }
+  .product-banner {
+    margin-top: 40px; background: rgba(15,124,110,0.15);
+    border: 1px solid rgba(15,168,153,0.25); border-radius: 16px;
+    padding: 32px 36px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+  }
+  .product-banner-text h3 { font-family: var(--font-display); font-size: 22px; color: white; margin-bottom: 6px; }
+  .product-banner-text p { font-size: 14px; color: rgba(255,255,255,0.55); }
+  .product-types { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
+  .product-type-tag {
+    background: rgba(200,151,42,0.12); border: 1px solid rgba(200,151,42,0.25);
+    color: var(--gold-light); font-size: 13px; padding: 8px 18px; border-radius: 20px;
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  /* ─── RESPONSIBILITY ─── */
+  #responsibility { background: white; }
+  .resp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .resp-list { display: flex; flex-direction: column; gap: 20px; }
+  .resp-item {
+    display: flex; gap: 20px; padding: 24px;
+    border-radius: 14px; border: 1px solid var(--gray-100);
+    transition: var(--transition);
+  }
+  .resp-item:hover { border-color: rgba(15,124,110,0.3); background: var(--teal-pale); }
+  .resp-item-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--teal-pale); display: flex; align-items: center;
+    justify-content: center; font-size: 18px; flex-shrink: 0;
+  }
+  .resp-item h4 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .resp-item p { font-size: 13.5px; color: var(--gray-500); line-height: 1.6; }
+  .resp-highlight {
+    background: var(--navy); border-radius: 20px; padding: 40px 36px; color: white;
+    position: sticky; top: 88px;
+  }
+  .resp-highlight h3 { font-family: var(--font-display); font-size: 24px; color: white; margin-bottom: 16px; line-height: 1.3; }
+  .resp-highlight p { font-size: 14.5px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 24px; }
+  .ethics-list { display: flex; flex-direction: column; gap: 12px; }
+  .ethics-item {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13.5px; color: rgba(255,255,255,0.75);
+  }
+  .ethics-item::before {
+    content: '✓'; width: 20px; height: 20px; border-radius: 50%;
+    background: rgba(15,168,153,0.25); color: var(--teal-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; flex-shrink: 0;
+  }
+
+  /* ─── CERTIFICATIONS ─── */
+  #certifications { background: var(--off-white); }
+  .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-bottom: 40px; }
+  .cert-card {
+    background: white; border-radius: 14px; padding: 24px 22px;
+    border: 1px solid var(--gray-100); transition: var(--transition);
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .cert-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+  .cert-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--teal-pale); color: var(--teal); font-size: 11px;
+    font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 6px; width: fit-content;
+  }
+  .cert-card h4 { font-size: 15px; font-weight: 600; color: var(--navy); line-height: 1.3; }
+  .cert-card p { font-size: 13px; color: var(--gray-500); line-height: 1.55; }
+  .export-certs { margin-top: 40px; }
+  .export-certs h3 { font-family: var(--font-display); font-size: 22px; color: var(--navy); margin-bottom: 20px; }
+  .cert-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+  .cert-tag {
+    background: white; border: 1px solid var(--gray-300);
+    color: var(--gray-700); font-size: 13px; padding: 8px 16px;
+    border-radius: 8px; display: flex; align-items: center; gap: 8px;
+  }
+  .cert-tag::before {
+    content: ''; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--gold); flex-shrink: 0;
+  }
+  .compliance-strip {
+    margin-top: 40px; background: var(--navy); border-radius: 16px;
+    padding: 28px 32px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center;
+  }
+  .compliance-item {
+    display: flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.75); font-size: 13.5px;
+  }
+  .compliance-item::before {
+    content: '🛡'; font-size: 14px;
+  }
+
+  /* ─── CONTACT ─── */
+  #contact { background: white; }
+  .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+  .contact-info { }
+  .contact-info p { font-size: 16px; color: var(--gray-500); line-height: 1.75; margin-bottom: 36px; }
+  .contact-details { display: flex; flex-direction: column; gap: 16px; }
+  .contact-detail {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 18px 20px; border-radius: 12px; background: var(--off-white);
+  }
+  .contact-detail-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: var(--teal-pale); display: flex; align-items: center;
+    justify-content: center; font-size: 16px; flex-shrink: 0;
+  }
+  .contact-detail h4 { font-size: 12px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
+  .contact-detail a, .contact-detail span { font-size: 14.5px; color: var(--navy); font-weight: 500; text-decoration: none; }
+  .contact-detail a:hover { color: var(--teal); }
+  .contact-form-wrap {
+    background: var(--off-white); border-radius: 20px;
+    padding: 40px 36px; border: 1px solid var(--gray-100);
+  }
+  .contact-form-wrap h3 { font-family: var(--font-display); font-size: 22px; color: var(--navy); margin-bottom: 24px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+  .form-group label { font-size: 12px; font-weight: 600; color: var(--gray-700); text-transform: uppercase; letter-spacing: 0.05em; }
+  .form-group input, .form-group select, .form-group textarea {
+    background: white; border: 1px solid var(--gray-300); border-radius: 10px;
+    padding: 12px 16px; font-family: var(--font-body); font-size: 14px; color: var(--text);
+    outline: none; transition: var(--transition); resize: none;
+    width: 100%;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--teal); box-shadow: 0 0 0 3px rgba(15,124,110,0.1);
+  }
+  .form-submit {
+    width: 100%; padding: 14px; border-radius: 10px; border: none;
+    background: var(--teal); color: white; font-family: var(--font-body);
+    font-size: 15px; font-weight: 600; cursor: pointer; transition: var(--transition);
+  }
+  .form-submit:hover { background: var(--teal-light); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy); color: rgba(255,255,255,0.6);
+    padding: 60px 5vw 32px;
+  }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand p { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.45); margin-top: 14px; max-width: 280px; }
+  .footer-col h5 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.3); margin-bottom: 16px; font-weight: 600; }
+  .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.55); text-decoration: none; margin-bottom: 10px; transition: var(--transition); }
+  .footer-col a:hover { color: var(--teal-light); }
+  .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin-bottom: 24px; }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-bottom p { font-size: 13px; }
+  .footer-bottom-links { display: flex; gap: 20px; }
+  .footer-bottom-links a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
+  .teal-dot { color: var(--teal-light); }
+
+  /* ─── TOAST ─── */
+  .toast {
+    position: fixed; bottom: 32px; right: 32px; z-index: 999;
+    background: var(--navy); color: white; padding: 16px 22px;
+    border-radius: 12px; font-size: 14px; border-left: 4px solid var(--teal-light);
+    transform: translateY(80px); opacity: 0; transition: var(--transition);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  }
+  .toast.show { transform: translateY(0); opacity: 1; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-hamburger { display: block; }
+    .about-layout, .resp-grid, .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .product-categories { grid-template-columns: repeat(2,1fr); }
+    .prod-cat-btn:first-child { border-radius: 10px 0 0 0; }
+    .prod-cat-btn:last-child { border-radius: 0 0 10px 10px; grid-column: span 2; }
+  }
+  @media (max-width: 560px) {
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .hero-stats { gap: 20px; }
+  }
+
+  /* ─── MOBILE MENU ─── */
+  .mobile-menu {
+    display: none; position: fixed; inset: 0; z-index: 99;
+    background: var(--navy); flex-direction: column; align-items: center;
+    justify-content: center; gap: 8px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    color: white; text-decoration: none; font-size: 22px;
+    font-family: var(--font-display); padding: 12px 32px;
+    border-radius: 10px; transition: var(--transition);
+  }
+  .mobile-menu a:hover { color: var(--gold-light); }
+  .mobile-close {
+    position: absolute; top: 20px; right: 20px; background: none; border: none;
+    color: white; font-size: 28px; cursor: pointer; padding: 8px;
+  }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+  .fade-in:nth-child(2) { transition-delay: 0.1s; }
+  .fade-in:nth-child(3) { transition-delay: 0.2s; }
+  .fade-in:nth-child(4) { transition-delay: 0.3s; }
+  .fade-in:nth-child(5) { transition-delay: 0.4s; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="nav-brand">
+    <div class="nav-logo-mark">A</div>
+    <div class="nav-brand-text">
+      <span class="nav-brand-name">Arvind Pharmaceuticals</span>
+      <span class="nav-brand-sub">Global Supplier & Exporter</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#responsibility">Responsibility</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact" class="nav-cta">Contact Us</a>
+  </div>
+  <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
+  <a href="#home" onclick="document.getElementById('mobileMenu').classList.remove('open')">Home</a>
+  <a href="#about" onclick="document.getElementById('mobileMenu').classList.remove('open')">About</a>
+  <a href="#products" onclick="document.getElementById('mobileMenu').classList.remove('open')">Products</a>
+  <a href="#responsibility" onclick="document.getElementById('mobileMenu').classList.remove('open')">Responsibility</a>
+  <a href="#certifications" onclick="document.getElementById('mobileMenu').classList.remove('open')">Certifications</a>
+  <a href="#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">India-Based Global Pharmaceutical Exporter</div>
+    <h1 class="hero-title">Delivering <em>Quality</em><br>Healthcare Worldwide</h1>
+    <p class="hero-desc">Trusted partner for distributors, hospitals, pharmacies, and healthcare institutions across Africa, Asia, CIS, and beyond — with reliable supply and regulatory-compliant exports.</p>
+    <div class="hero-actions">
+      <a href="#products" class="btn-primary">Explore Products →</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">13<span>+</span></div>
+        <div class="hero-stat-label">Therapeutic Areas</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">4<span>+</span></div>
+        <div class="hero-stat-label">Global Regions Served</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">WHO<span>-GMP</span></div>
+        <div class="hero-stat-label">Certified Partners</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY PARTNER -->
+<section id="why">
+  <div class="section-eyebrow">Why Choose Us</div>
+  <h2 class="section-title">Excellence That Drives<br>Our Commitment</h2>
+  <p class="section-subtitle">We combine pharmaceutical expertise with international trade capability to deliver dependable supply solutions across global markets.</p>
+  <div class="why-grid">
+    <div class="why-card fade-in">
+      <div class="why-icon">🏭</div>
+      <h3>Industry-Leading Expertise</h3>
+      <p>Our experienced team combines pharmaceutical knowledge with international trade expertise to deliver professional supply solutions.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">💊</div>
+      <h3>Wide Range of Products</h3>
+      <p>Comprehensive portfolio of pharmaceutical formulations across multiple therapeutic categories to meet diverse healthcare demands.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">✅</div>
+      <h3>Quality Assurance</h3>
+      <p>Every product is supported by verified documentation and sourced from compliant manufacturing facilities ensuring reliability and safety.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">💰</div>
+      <h3>Affordable Solutions</h3>
+      <p>Our sourcing strength enables competitive pricing without compromising standards, supporting accessible healthcare worldwide.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">📋</div>
+      <h3>Full Export Documentation</h3>
+      <p>Complete documentation support for regulatory compliance, including COPP, FSC, and country-specific registration dossiers.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">🌍</div>
+      <h3>Global Reach</h3>
+      <p>Proudly serving clients across Africa, Asia, CIS, and other growing healthcare markets with timely international shipment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-layout">
+    <div class="about-content">
+      <div class="section-eyebrow">About Us</div>
+      <h2 class="section-title">Committed to Quality.<br>Focused on Global Healthcare.</h2>
+      <p style="color: var(--gray-500); line-height: 1.75; margin-bottom: 24px;">Arvind Pharmaceuticals is an India-based pharmaceutical supplier and exporter dedicated to delivering high-quality medicines to international markets. With a strong sourcing network and deep understanding of global trade requirements, we support healthcare institutions worldwide.</p>
+      <p style="color: var(--gray-500); line-height: 1.75; margin-bottom: 32px;">Our approach is simple — quality products, transparent processes, and long-term partnerships. We collaborate with certified manufacturing facilities across India to ensure every product meets recognized quality and regulatory standards.</p>
+      <ul class="about-values">
+        <li class="about-value fade-in">
+          <span class="about-value-icon">🤝</span>
+          <div>
+            <h4>Our Vision</h4>
+            <p>To become a globally trusted pharmaceutical export partner known for reliability, integrity, and responsible healthcare supply.</p>
+          </div>
+        </li>
+        <li class="about-value fade-in">
+          <span class="about-value-icon">🎯</span>
+          <div>
+            <h4>Our Mission</h4>
+            <p>Supply safe, effective, and affordable medicines worldwide while maintaining high regulatory compliance and sustainable partnerships.</p>
+          </div>
+        </li>
+      </ul>
+      <div class="management-card fade-in">
+        <div class="mgmt-avatar">GN</div>
+        <div class="mgmt-info">
+          <h4>Mr. Gaurav Nasare</h4>
+          <p>Founder & Director — B.Pharm, M.Pharm</p>
+          <p class="mgmt-bio">"Quality, Compliance, and Trust are the foundation of our growth." With deep knowledge of pharmaceutical formulations and international trade, Gaurav leads Arvind Pharmaceuticals with a clear vision for responsible global healthcare supply.</p>
+        </div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="about-img-block">
+        <div class="about-badge">Est. in Pune, India</div>
+        <div>
+          <p class="about-img-quote">"Delivering <em>Quality Healthcare</em> Worldwide — With Responsibility and Integrity."</p>
+          <p class="about-img-attribution">— Arvind Pharmaceuticals Core Commitment</p>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; position: relative; z-index: 1; margin-top: 24px;">
+          <div style="background: rgba(255,255,255,0.07); border-radius: 12px; padding: 18px;">
+            <div style="font-family: 'Playfair Display', serif; font-size: 26px; color: white; font-weight: 700;">100%</div>
+            <div style="font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 4px;">Compliant Sourcing</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.07); border-radius: 12px; padding: 18px;">
+            <div style="font-family: 'Playfair Display', serif; font-size: 26px; color: #f0c96e; font-weight: 700;">4+</div>
+            <div style="font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 4px;">Continents Served</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-eyebrow">Our Portfolio</div>
+  <h2 class="section-title">Comprehensive Product Range</h2>
+  <p class="section-subtitle">From specialty medicines to generics, injectables, and hospital supplies — a strategically structured portfolio meeting chronic and acute treatment needs globally.</p>
+
+  <div class="product-types">
+    <div class="product-type-tag">💊 Specialty Medicines</div>
+    <div class="product-type-tag">🧴 Generic Medicines</div>
+    <div class="product-type-tag">💉 Injectables</div>
+    <div class="product-type-tag">🏥 Surgical & Hospital Supplies</div>
+  </div>
+
+  <div style="margin-top: 48px;">
+    <div class="section-eyebrow" style="color: rgba(255,255,255,0.4); margin-bottom: 20px;">Therapeutic Categories</div>
+    <div class="products-grid">
+      <div class="product-chip fade-in"><div class="prod-chip-dot"></div><span>Anti-Infectives</span></div>
+      <div class="product-chip fade-in"><div class="prod-chip-dot"></div><span>Cardiovascular</span></div>
+      <div class="product-chip fade-in"><div class="prod-chip-dot"></div><span>Critical Care</span></div>
+      <div class="product-chip fade-in"><div class="prod-chip-dot"></div><span>Dermatology</span></div>
+      <div class="product-chip fade-in"><div class="prod-chip-dot"></div><span>Gastroenterology</span></div>
+      <div class="product-chip fade-in"><div class="prod-chip-dot"></div><span>Gynaecology</span></div>
+      <div class="product-chip fade-in"><div class="prod-chip-dot"></div><span>Nephrology</span></div>
+      <div class="product-chip fade-in"><div class="prod-chip-dot"></div><span>Oncology</span></div>
+      <div class="product-chip fade-in"><div class="prod-chip-dot"></div><span>Ophthalmology</span></div>
+      <div class="product-chip fade-in"><div class="prod-chip-dot"></div><span>Orthopaedics</span></div>
+      <div class="product-chip fade-in"><div class="prod-chip-dot"></div><span>Paediatrics</span></div>
+      <div class="product-chip fade-in"><div class="prod-chip-dot"></div><span>Respiratory</span></div>
+      <div class="product-chip fade-in"><div class="prod-chip-dot"></div><span>Urology</span></div>
+    </div>
+  </div>
+
+  <div class="product-banner">
+    <div class="product-banner-text">
+      <h3>Looking for a specific product or formulation?</h3>
+      <p>Our team provides complete sourcing support — from inquiry to delivery with full documentation.</p>
+    </div>
+    <a href="#contact" class="btn-primary">Request a Quote →</a>
+  </div>
+</section>
+
+<!-- RESPONSIBILITY -->
+<section id="responsibility">
+  <div class="resp-grid">
+    <div>
+      <div class="section-eyebrow">CSR</div>
+      <h2 class="section-title">Committed to Ethical Conduct & Social Responsibility</h2>
+      <p style="color: var(--gray-500); margin-bottom: 36px;">Medicines play a vital role in protecting and improving lives. Our responsibility is guided by integrity, accountability, and respect for global healthcare systems.</p>
+      <div class="resp-list">
+        <div class="resp-item fade-in">
+          <div class="resp-item-icon">🌐</div>
+          <div>
+            <h4>Healthcare Access</h4>
+            <p>Supporting availability of quality pharmaceutical products in regions where reliable healthcare supply is essential, contributing to global accessibility.</p>
+          </div>
+        </div>
+        <div class="resp-item fade-in">
+          <div class="resp-item-icon">⚖️</div>
+          <div>
+            <h4>Ethical Standards</h4>
+            <p>Integrity in all professional interactions, transparency in documentation, respect for regulatory frameworks, and zero tolerance for non-compliant practices.</p>
+          </div>
+        </div>
+        <div class="resp-item fade-in">
+          <div class="resp-item-icon">🔬</div>
+          <div>
+            <h4>Quality & Regulatory Responsibility</h4>
+            <p>All export activities aligned with CDSCO regulations and applicable international standards. Sourced from compliant facilities with proper quality documentation.</p>
+          </div>
+        </div>
+        <div class="resp-item fade-in">
+          <div class="resp-item-icon">🌿</div>
+          <div>
+            <h4>Environmental Awareness</h4>
+            <p>Encouraging responsible environmental practices and collaborating with facilities that follow proper waste management and regulatory environmental guidelines.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="resp-highlight">
+        <h3>Our Ethical Commitments</h3>
+        <p>Trust and responsibility remain central to our operations. We uphold strict ethical principles across every aspect of our business.</p>
+        <div class="ethics-list">
+          <div class="ethics-item">Integrity in all professional interactions</div>
+          <div class="ethics-item">Transparency in documentation & procedures</div>
+          <div class="ethics-item">Respect for regulatory frameworks</div>
+          <div class="ethics-item">Zero tolerance for counterfeit products</div>
+          <div class="ethics-item">Ethical marketing practices</div>
+          <div class="ethics-item">Full regulatory documentation support</div>
+          <div class="ethics-item">Responsible pharmaceutical sourcing</div>
+          <div class="ethics-item">Patient safety as top priority</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-eyebrow">Quality Standards</div>
+  <h2 class="section-title">Certifications & Compliance</h2>
+  <p class="section-subtitle">We strictly follow national and international regulatory standards to ensure safe, effective, and high-quality pharmaceutical products for global markets.</p>
+
+  <div class="cert-grid">
+    <div class="cert-card fade-in">
+      <div class="cert-badge">Manufacturing</div>
+      <h4>WHO-GMP Certification</h4>
+      <p>Certified under WHO Good Manufacturing Practices guidelines ensuring quality production standards across all partner facilities.</p>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-badge">Quality</div>
+      <h4>ISO 9001:2015</h4>
+      <p>Quality Management System certification ensuring consistent product quality and rigorous process control throughout operations.</p>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-badge">Environment</div>
+      <h4>ISO 14001:2015</h4>
+      <p>Environmental Management System certification supporting eco-friendly manufacturing practices and sustainability.</p>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-badge">Regulatory</div>
+      <h4>CDSCO Registration</h4>
+      <p>Registered under the Central Drugs Standard Control Organization as per Indian pharmaceutical regulatory requirements.</p>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-badge">GMP</div>
+      <h4>GMP Certified Partners</h4>
+      <p>All third-party manufacturing facilities are GMP approved, ensuring consistent quality standards across the supply chain.</p>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-badge">Nutraceuticals</div>
+      <h4>FSSAI Licensed</h4>
+      <p>Licensed under the Food Safety and Standards Authority of India for nutraceutical and dietary supplement exports.</p>
+    </div>
+  </div>
+
+  <div class="export-certs">
+    <h3>Export Certifications & Documentation</h3>
+    <div class="cert-tags">
+      <div class="cert-tag">Certificate of Pharmaceutical Product (COPP)</div>
+      <div class="cert-tag">Free Sale Certificate (FSC)</div>
+      <div class="cert-tag">Product Registration Dossiers (CTD/ACTD)</div>
+      <div class="cert-tag">Country-Specific Regulatory Approvals</div>
+      <div class="cert-tag">Batch-wise COA Verification</div>
+      <div class="cert-tag">ICH Stability Studies</div>
+      <div class="cert-tag">Pharmacovigilance Support</div>
+    </div>
+  </div>
+
+  <div class="compliance-strip">
+    <div class="compliance-item">Zero tolerance for counterfeit products</div>
+    <div class="compliance-item">Transparent documentation</div>
+    <div class="compliance-item">Ethical marketing practices</div>
+    <div class="compliance-item">Full regulatory documentation support</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-eyebrow">Get In Touch</div>
+  <h2 class="section-title">Let's Partner Together</h2>
+  <p class="section-subtitle">Whether you're a distributor, hospital, or healthcare institution — we're ready to discuss your pharmaceutical supply requirements.</p>
+
+  <div class="contact-layout">
+    <div class="contact-info">
+      <p>From order confirmation to final delivery, we manage every step with precision. Reach out to us to discuss product availability, export documentation, or partnership opportunities.</p>
+      <div class="contact-details">
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🏢</div>
+          <div>
+            <h4>Company</h4>
+            <span>Arvind Pharmaceuticals</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div>
+            <h4>Location</h4>
+            <span>Pune, Maharashtra, India</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🌍</div>
+          <div>
+            <h4>Markets Served</h4>
+            <span>Africa, Asia, CIS & Emerging Healthcare Markets</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📋</div>
+          <div>
+            <h4>Specialization</h4>
+            <span>Branded & Generic Medicine Export</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form-wrap">
+      <h3>Send Us an Inquiry</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="John" id="fname">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith" id="lname">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Company / Organization</label>
+        <input type="text" placeholder="Your company name" id="company">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="you@company.com" id="email">
+      </div>
+      <div class="form-group">
+        <label>Inquiry Type</label>
+        <select id="inquiry">
+          <option value="">Select inquiry type...</option>
+          <option>Product Availability</option>
+          <option>Export Documentation</option>
+          <option>Pricing & Quotation</option>
+          <option>Partnership Opportunity</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea rows="4" placeholder="Describe your requirements..." id="message"></textarea>
+      </div>
+      <button class="form-submit" onclick="submitForm()">Submit Inquiry →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-brand" style="margin-bottom: 0;">
+        <div class="nav-logo-mark">A</div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Arvind Pharmaceuticals</span>
+          <span class="nav-brand-sub">Global Supplier & Exporter</span>
+        </div>
+      </div>
+      <p>India-based pharmaceutical supplier dedicated to delivering high-quality medicines to international markets with reliability, transparency, and professionalism.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#responsibility">Responsibility</a>
+    </div>
+    <div class="footer-col">
+      <h5>Products</h5>
+      <a href="#products">Specialty Medicines</a>
+      <a href="#products">Generic Medicines</a>
+      <a href="#products">Injectables</a>
+      <a href="#products">Hospital Supplies</a>
+    </div>
+    <div class="footer-col">
+      <h5>Compliance</h5>
+      <a href="#certifications">Certifications</a>
+      <a href="#certifications">WHO-GMP</a>
+      <a href="#certifications">Export Docs</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <hr class="footer-divider">
+  <div class="footer-bottom">
+    <p>© 2025 Arvind Pharmaceuticals<span class="teal-dot"> •</span> Delivering Quality Healthcare Worldwide</p>
+    <div class="footer-bottom-links">
+      <a href="#certifications">Certifications</a>
+      <a href="#responsibility">CSR Policy</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast">✓ Inquiry submitted — we'll be in touch shortly!</div>
+
+<script>
+  // NAV ACTIVE STATE
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
+    navLinks.forEach(l => {
+      l.classList.toggle('active', l.getAttribute('href') === '#' + cur);
+    });
+    // NAV SHADOW
+    document.getElementById('navbar').style.boxShadow =
+      window.scrollY > 20 ? '0 4px 20px rgba(0,0,0,0.3)' : 'none';
+  });
+
+  // FADE IN ON SCROLL
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+  // FORM SUBMIT
+  function submitForm() {
+    const email = document.getElementById('email').value;
+    const fname = document.getElementById('fname').value;
+    if (!fname || !email) {
+      alert('Please fill in your name and email address.');
+      return;
+    }
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4000);
+    ['fname','lname','company','email','message'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('inquiry').value = '';
+  }
+</script>
+</body>
+</html>
