@@ -16,12 +16,12 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" style={{ minHeight: 'calc(100vh - 68px)', paddingTop: '100px', paddingBottom: '80px' }}>
+    <section id="contact" style={{ minHeight: 'calc(100vh - 72px)', paddingTop: '120px', paddingBottom: '80px' }}>
       <div className="contact-layout">
         <div className="contact-info">
           <div className="section-eyebrow">Get in Touch</div>
           <h2 className="section-title">Ready to Forge a Global Partnership?</h2>
-          <p>Whether you're an importer seeking to source high-efficacy generic pharmaceuticals, a hospital network looking for reliable hospital supplies, or a distributor requiring full dossier support for local registrations, our specialized export executives are ready to assist you.</p>
+          <p style={{ color: 'var(--gray-600)', fontSize: '18px', lineHeight: '1.8', marginBottom: '48px' }}>Whether you're an importer seeking to source high-efficacy generic pharmaceuticals, a hospital network looking for reliable hospital supplies, or a distributor requiring full dossier support for local registrations, our specialized export executives are ready to assist you.</p>
           <div className="contact-details">
             <div className="contact-detail">
               <div className="contact-detail-icon">✉️</div>
@@ -50,7 +50,7 @@ const Contact = () => {
         <div>
           <div className="contact-form-wrap">
             <h3>Initiate a Trade Inquiry</h3>
-            <p style={{ fontSize: '13px', color: 'var(--gray-500)', marginBottom: '20px' }}>Complete the form below to request product lists, COAs, pricing catalogs, or regulatory assistance.</p>
+            <p style={{ fontSize: '14px', color: 'var(--gray-600)', marginBottom: '32px' }}>Complete the form below to request product lists, COAs, pricing catalogs, or regulatory assistance.</p>
             <form onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
@@ -87,21 +87,21 @@ const Contact = () => {
       </div>
 
       {/* NEW FAQ SECTION */}
-      <div style={{ marginTop: '100px', maxWidth: '800px', marginInline: 'auto' }}>
-         <h3 style={{ textAlign: 'center', fontFamily: 'var(--font-display)', fontSize: '28px', color: 'var(--navy)', marginBottom: '40px' }}>Frequently Asked Questions</h3>
-         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <div style={{ marginTop: '120px', maxWidth: '900px', marginInline: 'auto' }}>
+         <h3 style={{ textAlign: 'center', fontFamily: 'var(--font-display)', fontSize: '32px', color: 'var(--primary)', marginBottom: '56px', fontWeight: '800' }}>Frequently Asked Questions</h3>
+         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {faqs.map((faq, index) => (
-               <div key={index} style={{ border: '1px solid var(--gray-300)', borderRadius: '12px', overflow: 'hidden' }}>
+               <div key={index} style={{ border: '1px solid var(--gray-200)', borderRadius: '20px', overflow: 'hidden', background: 'white', boxShadow: activeFaq === index ? 'var(--shadow-lg)' : 'var(--shadow-sm)', transition: 'var(--transition)' }}>
                   <button 
                     onClick={() => setActiveFaq(activeFaq === index ? null : index)}
-                    style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px', background: 'white', border: 'none', cursor: 'pointer', textAlign: 'left' }}
+                    style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '24px 32px', background: 'white', border: 'none', cursor: 'pointer', textAlign: 'left' }}
                   >
-                     <span style={{ fontWeight: '600', color: 'var(--navy)', fontSize: '15px' }}>{faq.q}</span>
-                     <span style={{ color: 'var(--teal)', fontSize: '20px' }}>{activeFaq === index ? '−' : '+'}</span>
+                     <span style={{ fontWeight: '700', color: 'var(--primary)', fontSize: '17px' }}>{faq.q}</span>
+                     <span style={{ color: 'var(--secondary)', fontSize: '24px', transition: 'var(--transition)', transform: activeFaq === index ? 'rotate(45deg)' : 'rotate(0deg)' }}>+</span>
                   </button>
                   {activeFaq === index && (
-                     <div style={{ padding: '0 20px 20px', background: 'white' }}>
-                       <p style={{ color: 'var(--gray-500)', fontSize: '14px', lineHeight: '1.6' }}>{faq.a}</p>
+                     <div style={{ padding: '0 32px 32px', background: 'white' }}>
+                       <p style={{ color: 'var(--gray-600)', fontSize: '15px', lineHeight: '1.8' }}>{faq.a}</p>
                      </div>
                   )}
                </div>

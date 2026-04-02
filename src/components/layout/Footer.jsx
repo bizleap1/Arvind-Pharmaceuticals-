@@ -6,13 +6,13 @@ const Footer = () => {
     <footer>
       <div className="footer-grid">
         <div className="footer-brand">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <div className="nav-logo-mark" style={{ width: '32px', height: '32px', fontSize: '15px' }}>A</div>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+            <div className="nav-logo-mark" style={{ width: '40px', height: '40px', fontSize: '18px' }}>A</div>
             <div className="nav-brand-text">
-              <span className="nav-brand-name">Arvind Pharmaceuticals</span>
-              <span className="nav-brand-sub" style={{ fontSize: '9px' }}>Global Supplier & Exporter</span>
+              <span className="nav-brand-name" style={{ color: 'white' }}>Arvind Pharmaceuticals</span>
+              <span className="nav-brand-sub" style={{ color: 'rgba(255,255,255,0.5)' }}>Global Excellence</span>
             </div>
-          </div>
+          </Link>
           <p>Delivering high-quality pharmaceutical formulations and essential medical supplies to global markets with responsibility and integrity.</p>
         </div>
         
@@ -32,14 +32,14 @@ const Footer = () => {
           <Link to="/products">Surgical Supplies</Link>
         </div>
         
-        <div className="footer-col" style={{gridColumn: 'span 1'}}>
+        <div className="footer-col">
           <h5>Contact</h5>
           <a href="mailto:export@arvindpharmaceuticals.com">export@arvindpharmaceuticals.com</a>
           <a href="tel:+91XXXXXXXXXX">+91 XX XXXX XXXX</a>
-          <p style={{ fontSize: '13px', marginTop: '10px', lineHeight: '1.6' }}>
+          <div style={{ fontSize: '14px', marginTop: '16px', lineHeight: '1.7', color: 'rgba(255,255,255,0.5)' }}>
             Pune, Maharashtra<br/>
             India - 411001
-          </p>
+          </div>
         </div>
       </div>
       

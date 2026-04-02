@@ -18,14 +18,14 @@ const Home = () => {
   return (
     <>
       {/* ─── ENHANCED HERO SECTION ─── */}
-      <section id="home" style={{ paddingTop: '120px', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+      <section id="home">
         <div className="hero-bg-pattern"></div>
         <div className="hero-grid-lines"></div>
         
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '60px', width: '100%', position: 'relative', zIndex: 1 }}>
           <div className="hero-content" style={{ flex: '1 1 500px', maxWidth: '650px' }}>
             <div className="hero-eyebrow fade-in">India-Based Global Pharmaceutical Exporter</div>
-            <h1 className="hero-title fade-in">Delivering <em>Quality</em><br/>Healthcare Worldwide</h1>
+            <h1 className="hero-title fade-in">Delivering <em>Quality</em> Healthcare Worldwide</h1>
             <p className="hero-desc fade-in">Trusted partner for distributors, hospitals, pharmacies, and healthcare institutions across Africa, Asia, CIS, and beyond. We combine advanced pharmaceutical formulations with robust regulatory compliance and international logistics.</p>
             
             <div className="hero-actions fade-in">
@@ -51,18 +51,18 @@ const Home = () => {
 
           <div style={{ flex: '1 1 400px', display: 'flex', justifyContent: 'center' }} className="fade-in">
              <div style={{ position: 'relative' }}>
-                <div style={{ position: 'absolute', top: '-10%', left: '-10%', right: '-10%', bottom: '-10%', background: 'radial-gradient(circle, rgba(20, 168, 153, 0.4) 0%, transparent 60%)', filter: 'blur(40px)', zIndex: 0 }}></div>
+                <div style={{ position: 'absolute', top: '-10%', left: '-10%', right: '-10%', bottom: '-10%', background: 'radial-gradient(circle, rgba(13, 148, 136, 0.1) 0%, transparent 60%)', filter: 'blur(40px)', zIndex: 0 }}></div>
                 <img 
-                  src="/assets/hero-graphic.png" 
-                  alt="Global Pharmaceutical Logistics" 
+                  src="/assets/hero-pharmacy.png" 
+                  alt="Global Pharmaceutical Excellence" 
                   style={{ 
                     position: 'relative',
                     zIndex: 1,
                     width: '100%', 
                     maxWidth: '550px', 
-                    borderRadius: '24px', 
-                    boxShadow: '0 30px 60px rgba(10, 22, 40, 0.6), 0 0 0 1px rgba(255,255,255,0.08)',
-                    transform: 'perspective(1000px) rotateY(-5deg) rotateX(2deg)',
+                    borderRadius: '32px', 
+                    boxShadow: 'var(--shadow-lg)',
+                    transform: 'perspective(1500px) rotateY(-8deg) rotateX(4deg)',
                     transition: 'var(--transition)'
                   }} 
                 />
@@ -77,23 +77,23 @@ const Home = () => {
         <h2 className="section-title">Seamless Global Supply Chain</h2>
         <p className="section-subtitle">We manage the entire pharmaceutical export process, ensuring that quality formulations reach essential markets safely, affordably, and in full compliance with local regulations.</p>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '32px', marginTop: '40px' }}>
-           <div className="fade-in" style={{ background: 'var(--off-white)', padding: '32px', borderRadius: '16px', border: '1px solid var(--gray-100)' }}>
-              <div style={{ fontSize: '32px', marginBottom: '16px', color: 'var(--teal)' }}>01</div>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', color: 'var(--navy)', marginBottom: '12px' }}>Verified Sourcing</h3>
-              <p style={{ fontSize: '14px', color: 'var(--gray-500)', lineHeight: '1.6' }}>We source strictly from WHO-GMP and ISO certified Indian manufacturing facilities to ensure absolute product safety and efficacy.</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px', marginTop: '48px' }}>
+           <div className="fade-in" style={{ background: 'var(--gray-50)', padding: '40px', borderRadius: '24px', border: '1px solid var(--gray-200)', transition: 'var(--transition)' }}>
+              <div style={{ fontSize: '40px', marginBottom: '20px', color: 'var(--secondary)', fontWeight: '800', opacity: '0.5' }}>01</div>
+              <h3 style={{ fontSize: '20px', fontWeight: '700', color: 'var(--primary)', marginBottom: '16px' }}>Verified Sourcing</h3>
+              <p style={{ fontSize: '15px', color: 'var(--gray-600)', lineHeight: '1.7' }}>We source strictly from WHO-GMP and ISO certified Indian manufacturing facilities to ensure absolute product safety and efficacy.</p>
            </div>
            
-           <div className="fade-in" style={{ background: 'var(--off-white)', padding: '32px', borderRadius: '16px', border: '1px solid var(--gray-100)' }}>
-              <div style={{ fontSize: '32px', marginBottom: '16px', color: 'var(--teal)' }}>02</div>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', color: 'var(--navy)', marginBottom: '12px' }}>Regulatory Support</h3>
-              <p style={{ fontSize: '14px', color: 'var(--gray-500)', lineHeight: '1.6' }}>Our dedicated team provides complete documentation (Dossiers in CTD/ACTD formats, COPP, FSC) to simplify country-specific registrations.</p>
+           <div className="fade-in" style={{ background: 'var(--gray-50)', padding: '40px', borderRadius: '24px', border: '1px solid var(--gray-200)', transition: 'var(--transition)' }}>
+              <div style={{ fontSize: '40px', marginBottom: '20px', color: 'var(--secondary)', fontWeight: '800', opacity: '0.5' }}>02</div>
+              <h3 style={{ fontSize: '20px', fontWeight: '700', color: 'var(--primary)', marginBottom: '16px' }}>Regulatory Support</h3>
+              <p style={{ fontSize: '15px', color: 'var(--gray-600)', lineHeight: '1.7' }}>Our dedicated team provides complete documentation (Dossiers in CTD/ACTD formats, COPP, FSC) to simplify country-specific registrations.</p>
            </div>
 
-           <div className="fade-in" style={{ background: 'var(--off-white)', padding: '32px', borderRadius: '16px', border: '1px solid var(--gray-100)' }}>
-              <div style={{ fontSize: '32px', marginBottom: '16px', color: 'var(--teal)' }}>03</div>
-              <h3 style={{ fontSize: '18px', fontWeight: '600', color: 'var(--navy)', marginBottom: '12px' }}>Logistics & Delivery</h3>
-              <p style={{ fontSize: '14px', color: 'var(--gray-500)', lineHeight: '1.6' }}>We coordinate secure international freight, handling temperature-sensitive cargo and adhering precisely to GDP (Good Distribution Practices).</p>
+           <div className="fade-in" style={{ background: 'var(--gray-50)', padding: '40px', borderRadius: '24px', border: '1px solid var(--gray-200)', transition: 'var(--transition)' }}>
+              <div style={{ fontSize: '40px', marginBottom: '20px', color: 'var(--secondary)', fontWeight: '800', opacity: '0.5' }}>03</div>
+              <h3 style={{ fontSize: '20px', fontWeight: '700', color: 'var(--primary)', marginBottom: '16px' }}>Logistics & Delivery</h3>
+              <p style={{ fontSize: '15px', color: 'var(--gray-600)', lineHeight: '1.7' }}>We coordinate secure international freight, handling temperature-sensitive cargo and adhering precisely to GDP (Good Distribution Practices).</p>
            </div>
         </div>
       </section>

@@ -14,12 +14,10 @@ const Certifications = () => {
   }, []);
 
   return (
-    <section id="certifications" style={{ minHeight: 'calc(100vh - 68px)', paddingTop: '100px', paddingBottom: '80px' }}>
+    <section id="certifications" style={{ minHeight: 'calc(100vh - 72px)', paddingTop: '120px', paddingBottom: '80px' }}>
       <div className="section-eyebrow">Quality Standards & Assurances</div>
       <h2 className="section-title">Unyielding Compliance Protocols</h2>
       <p className="section-subtitle">In the pharmaceutical landscape, quality is non-negotiable. We strictly follow national and international regulatory frameworks, ensuring that every shipment meets the exact chemical and physical specifications critical for patient outcomes.</p>
-
-
 
       <div className="cert-grid">
         <div className="cert-card fade-in">
@@ -55,30 +53,30 @@ const Certifications = () => {
       </div>
 
       {/* 3-Tier Quality Framework */}
-      <div style={{ marginTop: '80px', padding: '48px', background: 'var(--teal-pale)', borderRadius: '24px', border: '1px solid rgba(15, 124, 110, 0.1)' }} className="fade-in">
-         <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', color: 'var(--navy)', marginBottom: '32px', textAlign: 'center' }}>Our 3-Tier Quality Control Framework</h3>
-         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px' }}>
-            <div style={{ background: 'white', padding: '32px', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}>
-               <div style={{ color: 'var(--teal)', fontSize: '24px', fontWeight: '700', marginBottom: '16px' }}>01</div>
-               <h4 style={{ color: 'var(--navy)', marginBottom: '12px' }}>API Validation</h4>
-               <p style={{ fontSize: '14px', color: 'var(--gray-500)', lineHeight: '1.7' }}>Comprehensive testing of Active Pharmaceutical Ingredients via HPLC/GC spectroscopy to ensure total purity before formulation begins.</p>
+      <div style={{ marginTop: '100px', padding: '64px', background: 'var(--bg-soft)', borderRadius: '32px', border: '1px solid var(--gray-200)', boxShadow: 'var(--shadow)' }} className="fade-in">
+         <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '28px', color: 'var(--primary)', marginBottom: '40px', textAlign: 'center', fontWeight: '800' }}>Our 3-Tier Quality Control Framework</h3>
+         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px' }}>
+            <div style={{ background: 'white', padding: '40px', borderRadius: '24px', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--gray-100)', transition: 'var(--transition)' }} className="why-card">
+               <div style={{ color: 'var(--secondary)', fontSize: '32px', fontWeight: '800', marginBottom: '20px', opacity: '0.5' }}>01</div>
+               <h4 style={{ color: 'var(--primary)', marginBottom: '16px', fontSize: '20px', fontWeight: '700' }}>API Validation</h4>
+               <p style={{ fontSize: '15px', color: 'var(--gray-600)', lineHeight: '1.7' }}>Comprehensive testing of Active Pharmaceutical Ingredients via HPLC/GC spectroscopy to ensure total purity before formulation begins.</p>
             </div>
-            <div style={{ background: 'white', padding: '32px', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}>
-               <div style={{ color: 'var(--teal)', fontSize: '24px', fontWeight: '700', marginBottom: '16px' }}>02</div>
-               <h4 style={{ color: 'var(--navy)', marginBottom: '12px' }}>Operational Vigilance</h4>
-               <p style={{ fontSize: '14px', color: 'var(--gray-500)', lineHeight: '1.7' }}>Real-time mass-balance and content-uniformity testing during the manufacturing cycle to guarantee precise dosage and batch replication.</p>
+            <div style={{ background: 'white', padding: '40px', borderRadius: '24px', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--gray-100)', transition: 'var(--transition)' }} className="why-card">
+               <div style={{ color: 'var(--secondary)', fontSize: '32px', fontWeight: '800', marginBottom: '20px', opacity: '0.5' }}>02</div>
+               <h4 style={{ color: 'var(--primary)', marginBottom: '16px', fontSize: '20px', fontWeight: '700' }}>Operational Vigilance</h4>
+               <p style={{ fontSize: '15px', color: 'var(--gray-600)', lineHeight: '1.7' }}>Real-time mass-balance and content-uniformity testing during the manufacturing cycle to guarantee precise dosage and batch replication.</p>
             </div>
-            <div style={{ background: 'white', padding: '32px', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}>
-               <div style={{ color: 'var(--teal)', fontSize: '24px', fontWeight: '700', marginBottom: '16px' }}>03</div>
-               <h4 style={{ color: 'var(--navy)', marginBottom: '12px' }}>Post-Market Surety</h4>
-               <p style={{ fontSize: '14px', color: 'var(--gray-500)', lineHeight: '1.7' }}>Rigorous pharmacovigilance and retention-sample monitoring to ensure product shelf-stability and safety throughout the entire product lifecycle.</p>
+            <div style={{ background: 'white', padding: '40px', borderRadius: '24px', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--gray-100)', transition: 'var(--transition)' }} className="why-card">
+               <div style={{ color: 'var(--secondary)', fontSize: '32px', fontWeight: '800', marginBottom: '20px', opacity: '0.5' }}>03</div>
+               <h4 style={{ color: 'var(--primary)', marginBottom: '16px', fontSize: '20px', fontWeight: '700' }}>Post-Market Surety</h4>
+               <p style={{ fontSize: '15px', color: 'var(--gray-600)', lineHeight: '1.7' }}>Rigorous pharmacovigilance and retention-sample monitoring to ensure product shelf-stability and safety throughout the entire product lifecycle.</p>
             </div>
          </div>
       </div>
 
-      <div className="export-certs fade-in" style={{ marginTop: '80px' }}>
-        <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', marginBottom: '16px' }}>Detailed Regulatory Documentation</h3>
-        <p style={{ color: 'var(--gray-500)', marginBottom: '24px', maxWidth: '750px', lineHeight: '1.7' }}>To facilitate seamless market entry, our dedicated regulatory department assists with specialized dossier compilation in CTD/ACTD format for Ministries of Health globally.</p>
+      <div className="export-certs fade-in" style={{ marginTop: '100px' }}>
+        <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '28px', color: 'var(--primary)', marginBottom: '24px', fontWeight: '800' }}>Detailed Regulatory Documentation</h3>
+        <p style={{ color: 'var(--gray-600)', marginBottom: '40px', maxWidth: '850px', lineHeight: '1.8', fontSize: '16px' }}>To facilitate seamless market entry, our dedicated regulatory department assists with specialized dossier compilation in CTD/ACTD format for Ministries of Health globally.</p>
         <div className="cert-tags">
           <div className="cert-tag">Certificate of Pharmaceutical Product (COPP)</div>
           <div className="cert-tag">Free Sale Certificate (FSC)</div>

@@ -31,13 +31,13 @@ const Navbar = () => {
         </button>
       </nav>
 
-      <div className={`mobile-menu ${menuOpen ? 'open' : ''}`} id="mobileMenu">
-        <div className="mobile-menu-inner">
+      <div className={`mobile-menu ${menuOpen ? 'open' : ''}`} id="mobileMenu" onClick={() => setMenuOpen(false)}>
+        <div className="mobile-menu-inner" onClick={(e) => e.stopPropagation()}>
           <div className="mobile-menu-header">
             <div className="nav-logo-mark">A</div>
-            <div className="nav-brand-text">
-              <span style={{ color: 'white' }}>Arvind Pharmaceuticals</span>
-              <span style={{ fontSize: '9px', color: 'var(--gold-light)' }}>Global Excellence</span>
+            <div className="nav-brand-text" style={{ textAlign: 'left' }}>
+              <span className="nav-brand-name">Arvind Pharmaceuticals</span>
+              <span className="nav-brand-sub">Global Excellence</span>
             </div>
           </div>
           <div className="mobile-menu-links">

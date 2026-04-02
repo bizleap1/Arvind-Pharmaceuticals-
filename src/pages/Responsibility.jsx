@@ -15,12 +15,12 @@ const Responsibility = () => {
 
   return (
     <div style={{ paddingBottom: '80px' }}>
-      <section id="responsibility" style={{ minHeight: 'calc(100vh - 68px)', paddingTop: '100px' }}>
+      <section id="responsibility" style={{ minHeight: 'calc(100vh - 72px)', paddingTop: '120px' }}>
         <div className="resp-grid">
           <div>
             <div className="section-eyebrow">Corporate Social Responsibility</div>
             <h2 className="section-title">Ethical Trade & Global Healthcare Impact</h2>
-            <p style={{ color: 'var(--gray-500)', marginBottom: '36px', lineHeight: '1.8' }}>
+            <p style={{ color: 'var(--gray-600)', marginBottom: '48px', lineHeight: '1.8', fontSize: '18px' }}>
               At Arvind Pharmaceuticals, we recognize that our role extends beyond commerce. As a link in the global healthcare chain, we hold a profound responsibility to ensure that our operations contribute positively to the health of communities and the integrity of the environment.
             </p>
             <div className="resp-list">
@@ -74,24 +74,25 @@ const Responsibility = () => {
       </section>
 
       {/* NEW: COMMITMENT TO SUSTAINABILITY SECTION */}
-      <section style={{ background: 'var(--navy)', color: 'white', padding: '80px 5vw', marginTop: '60px' }}>
-         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '32px', marginBottom: '24px' }}>Our Sustainability Commitment</h2>
-            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '16px', lineHeight: '1.8', marginBottom: '40px' }}>
+      <section style={{ background: 'var(--primary)', color: 'white', padding: '100px 5vw', marginTop: '80px', borderRadius: '48px', position: 'relative', overflow: 'hidden' }}>
+         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'radial-gradient(circle at 90% 10%, rgba(20, 184, 166, 0.15) 0%, transparent 50%)' }}></div>
+         <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '36px', marginBottom: '24px', fontWeight: '800' }}>Our Sustainability Commitment</h2>
+            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '18px', lineHeight: '1.8', marginBottom: '56px' }}>
                We are aligning our business growth with global sustainability goals. By optimizing our export logistics to reduce carbon footprints and partnering with eco-conscious manufacturers, we are ensuring that the future of healthcare is as healthy as the patients we serve.
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '30px' }}>
-               <div className="fade-in" style={{ padding: '20px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }}>
-                  <h4 style={{ color: 'var(--gold-light)', marginBottom: '10px' }}>Supply Chain Efficiency</h4>
-                  <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>Optimizing routes and consolidating shipments to minimize logistics-related GHG emissions.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px' }}>
+               <div className="fade-in" style={{ padding: '32px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '24px', backdropFilter: 'blur(10px)' }}>
+                  <h4 style={{ color: 'var(--secondary-light)', marginBottom: '12px', fontSize: '18px', fontWeight: '700' }}>Supply Chain Efficiency</h4>
+                  <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.6)', lineHeight: '1.6' }}>Optimizing routes and consolidating shipments to minimize logistics-related GHG emissions.</p>
                </div>
-               <div className="fade-in" style={{ padding: '20px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }}>
-                  <h4 style={{ color: 'var(--gold-light)', marginBottom: '10px' }}>Ethical Sourcing</h4>
-                  <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>Auditing partners for fair labor practices and safe working environments.</p>
+               <div className="fade-in" style={{ padding: '32px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '24px', backdropFilter: 'blur(10px)' }}>
+                  <h4 style={{ color: 'var(--secondary-light)', marginBottom: '12px', fontSize: '18px', fontWeight: '700' }}>Ethical Sourcing</h4>
+                  <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.6)', lineHeight: '1.6' }}>Auditing partners for fair labor practices and safe working environments.</p>
                </div>
-               <div className="fade-in" style={{ padding: '20px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }}>
-                  <h4 style={{ color: 'var(--gold-light)', marginBottom: '10px' }}>Document Digitalization</h4>
-                  <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>Moving towards paperless documentation for dossiers and trade certificates.</p>
+               <div className="fade-in" style={{ padding: '32px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '24px', backdropFilter: 'blur(10px)' }}>
+                  <h4 style={{ color: 'var(--secondary-light)', marginBottom: '12px', fontSize: '18px', fontWeight: '700' }}>Document Digitalization</h4>
+                  <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.6)', lineHeight: '1.6' }}>Moving towards paperless documentation for dossiers and trade certificates.</p>
                </div>
             </div>
          </div>
