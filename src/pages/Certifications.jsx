@@ -19,24 +19,7 @@ const Certifications = () => {
       <h2 className="section-title">Unyielding Compliance Protocols</h2>
       <p className="section-subtitle">In the pharmaceutical landscape, quality is non-negotiable. We strictly follow national and international regulatory frameworks, ensuring that every shipment meets the exact chemical and physical specifications critical for patient outcomes.</p>
 
-      {/* Visual Compliance Graphic */}
-      <div style={{ margin: '40px 0', display: 'flex', justifyContent: 'center' }} className="fade-in">
-         <div style={{ position: 'relative', width: '100%', maxWidth: '800px' }}>
-            <div style={{ position: 'absolute', top: '0', left: '0', right: '0', bottom: '0', background: 'radial-gradient(circle, rgba(15, 124, 110, 0.15) 0%, transparent 70%)', zIndex: 0 }}></div>
-            <img 
-              src="/assets/compliance-graphic.png" 
-              alt="Global Pharmaceutical Compliance & Quality Assurance" 
-              style={{ 
-                width: '100%', 
-                borderRadius: '24px', 
-                boxShadow: '0 25px 60px rgba(0,0,0,0.3)',
-                border: '1px solid rgba(255,255,255,0.08)',
-                position: 'relative',
-                zIndex: 1
-              }} 
-            />
-         </div>
-      </div>
+
 
       <div className="cert-grid">
         <div className="cert-card fade-in">
