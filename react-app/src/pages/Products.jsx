@@ -21,25 +21,6 @@ const Products = () => {
         <h2 className="section-title" style={{ color: 'white' }}>Comprehensive Product Array</h2>
         <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.6)' }}>Engineered to address both acute illnesses and chronic life-threatening conditions, our diverse product portfolio ensures health professionals globally have access to safe, high-efficacy pharmaceutical solutions.</p>
 
-        {/* Visual Graphic Section */}
-        <div style={{ margin: '40px 0', display: 'flex', justifyContent: 'center' }} className="fade-in">
-           <div style={{ position: 'relative', width: '100%', maxWidth: '900px' }}>
-              <div style={{ position: 'absolute', top: '0', left: '0', right: '0', bottom: '0', background: 'radial-gradient(circle, rgba(20, 168, 153, 0.2) 0%, transparent 70%)', zIndex: 0 }}></div>
-              <img 
-                src="/assets/products-graphic.png" 
-                alt="Diverse Pharmaceutical Dosage Forms" 
-                style={{ 
-                  width: '100%', 
-                  borderRadius: '20px', 
-                  boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  position: 'relative',
-                  zIndex: 1
-                }} 
-              />
-           </div>
-        </div>
-
         {/* Formulations & Dosage Forms */}
         <div style={{ marginTop: '40px', marginBottom: '60px' }} className="fade-in">
           <h3 style={{ color: 'white', fontFamily: 'var(--font-display)', fontSize: '24px', marginBottom: '20px' }}>Available Dosage Forms</h3>
