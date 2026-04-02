@@ -22,19 +22,33 @@ const Navbar = () => {
           <NavLink to="/certifications" className={({ isActive }) => (isActive ? 'active' : '')}>Certifications</NavLink>
           <NavLink to="/contact" className="nav-cta">Contact Us</NavLink>
         </div>
-        <button className="nav-hamburger" onClick={() => setMenuOpen(true)} aria-label="Menu">
+        <button 
+          className={`nav-hamburger ${menuOpen ? 'active' : ''}`} 
+          onClick={() => setMenuOpen(!menuOpen)} 
+          aria-label="Toggle Menu"
+        >
           <span></span><span></span><span></span>
         </button>
       </nav>
 
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`} id="mobileMenu">
-        <button className="mobile-close" onClick={() => setMenuOpen(false)}>✕</button>
-        <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-        <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
-        <Link to="/products" onClick={() => setMenuOpen(false)}>Products</Link>
-        <Link to="/responsibility" onClick={() => setMenuOpen(false)}>Responsibility</Link>
-        <Link to="/certifications" onClick={() => setMenuOpen(false)}>Certifications</Link>
-        <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+        <div className="mobile-menu-inner">
+          <div className="mobile-menu-header">
+            <div className="nav-logo-mark">A</div>
+            <div className="nav-brand-text">
+              <span style={{ color: 'white' }}>Arvind Pharmaceuticals</span>
+              <span style={{ fontSize: '9px', color: 'var(--gold-light)' }}>Global Excellence</span>
+            </div>
+          </div>
+          <div className="mobile-menu-links">
+            <NavLink to="/" onClick={() => setMenuOpen(false)}>Home</NavLink>
+            <NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
+            <NavLink to="/products" onClick={() => setMenuOpen(false)}>Products</NavLink>
+            <NavLink to="/responsibility" onClick={() => setMenuOpen(false)}>Responsibility</NavLink>
+            <NavLink to="/certifications" onClick={() => setMenuOpen(false)}>Certifications</NavLink>
+            <NavLink to="/contact" className="mobile-menu-cta" onClick={() => setMenuOpen(false)}>Contact Us</NavLink>
+          </div>
+        </div>
       </div>
     </>
   );
