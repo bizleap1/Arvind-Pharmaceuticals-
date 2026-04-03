@@ -1,17 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/logo ap.png';
 
 const Footer = () => {
   return (
     <footer>
       <div className="footer-grid">
         <div className="footer-brand">
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
-            <div className="nav-logo-mark" style={{ width: '40px', height: '40px', fontSize: '18px' }}>A</div>
-            <div className="nav-brand-text">
-              <span className="nav-brand-name" style={{ color: 'white' }}>Arvind Pharmaceuticals</span>
-              <span className="nav-brand-sub" style={{ color: 'rgba(255,255,255,0.5)' }}>Global Excellence</span>
-            </div>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', marginBottom: '8px' }}>
+            <img src={logo} alt="Arvind Pharmaceuticals" style={{ height: '64px', width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)', opacity: 0.92 }} />
           </Link>
           <p>Delivering high-quality pharmaceutical formulations and essential medical supplies to global markets with responsibility and integrity.</p>
         </div>
