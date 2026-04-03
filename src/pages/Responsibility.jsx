@@ -16,7 +16,7 @@ const Responsibility = () => {
   return (
     <div style={{ overflow: 'hidden' }}>
       {/* ─── ENHANCED HERO ─── */}
-      <section style={{ 
+      <section className="responsibility-hero-section" style={{ 
         position: 'relative', 
         padding: '100px 5vw 60px', 
         background: 'linear-gradient(135deg, white 0%, var(--gray-50) 100%)',
@@ -52,11 +52,11 @@ const Responsibility = () => {
         </div>
 
         {/* Floating engaging interactive elements */}
-        <div style={{ position: 'absolute', top: '20%', right: '8%', background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(10px)', padding: '16px 24px', borderRadius: '24px', boxShadow: '0 20px 40px rgba(13,148,136,0.15)', border: '1px solid rgba(13,148,136,0.2)', animation: 'floatBadge 6s infinite ease-in-out', zIndex: 2, display: 'flex', alignItems: 'center', gap: '14px' }}>
+        <div className="hero-floating-badge" style={{ position: 'absolute', top: '20%', right: '8%', background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(10px)', padding: '16px 24px', borderRadius: '24px', boxShadow: '0 20px 40px rgba(13,148,136,0.15)', border: '1px solid rgba(13,148,136,0.2)', animation: 'floatBadge 6s infinite ease-in-out', zIndex: 2, display: 'flex', alignItems: 'center', gap: '14px' }}>
            <div style={{ fontSize: '26px' }}>🌍</div>
            <div style={{ color: 'var(--primary)', fontWeight: '800', fontSize: '15px' }}>Global Impact</div>
         </div>
-        <div style={{ position: 'absolute', bottom: '15%', right: '18%', background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(10px)', padding: '16px 24px', borderRadius: '24px', boxShadow: '0 20px 40px rgba(27,54,93,0.12)', border: '1px solid rgba(27,54,93,0.15)', animation: 'floatBadgeAlt 7s infinite ease-in-out', zIndex: 2, display: 'flex', alignItems: 'center', gap: '14px' }}>
+        <div className="hero-floating-badge" style={{ position: 'absolute', bottom: '15%', right: '18%', background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(10px)', padding: '16px 24px', borderRadius: '24px', boxShadow: '0 20px 40px rgba(27,54,93,0.12)', border: '1px solid rgba(27,54,93,0.15)', animation: 'floatBadgeAlt 7s infinite ease-in-out', zIndex: 2, display: 'flex', alignItems: 'center', gap: '14px' }}>
            <div style={{ fontSize: '26px' }}>🛡️</div>
            <div style={{ color: 'var(--primary)', fontWeight: '800', fontSize: '15px' }}>True Integrity</div>
         </div>

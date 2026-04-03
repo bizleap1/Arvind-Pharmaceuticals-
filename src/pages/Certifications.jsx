@@ -19,7 +19,7 @@ const Certifications = () => {
     <div style={{ paddingBottom: '80px' }}>
 
       {/* ─── HERO SECTION ─── */}
-      <section style={{ 
+      <section className="certifications-hero-section" style={{ 
         position: 'relative', 
         padding: '100px 5vw 80px', 
         background: 'linear-gradient(135deg, white 0%, var(--gray-50) 100%)',
@@ -55,11 +55,11 @@ const Certifications = () => {
         </div>
 
         {/* Floating engaging interactive elements */}
-        <div style={{ position: 'absolute', top: '25%', right: '8%', background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(10px)', padding: '16px 24px', borderRadius: '24px', boxShadow: '0 20px 40px rgba(245,158,11,0.15)', border: '1px solid rgba(245,158,11,0.2)', animation: 'floatBadge 6s infinite ease-in-out', zIndex: 2, display: 'flex', alignItems: 'center', gap: '14px' }}>
+        <div className="hero-floating-badge" style={{ position: 'absolute', top: '25%', right: '8%', background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(10px)', padding: '16px 24px', borderRadius: '24px', boxShadow: '0 20px 40px rgba(245,158,11,0.15)', border: '1px solid rgba(245,158,11,0.2)', animation: 'floatBadge 6s infinite ease-in-out', zIndex: 2, display: 'flex', alignItems: 'center', gap: '14px' }}>
            <div style={{ fontSize: '26px' }}>🏆</div>
            <div style={{ color: 'var(--primary)', fontWeight: '800', fontSize: '15px' }}>ISO Certified</div>
         </div>
-        <div style={{ position: 'absolute', bottom: '15%', right: '18%', background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(10px)', padding: '16px 24px', borderRadius: '24px', boxShadow: '0 20px 40px rgba(13,148,136,0.15)', border: '1px solid rgba(13,148,136,0.2)', animation: 'floatBadgeAlt 7s infinite ease-in-out', zIndex: 2, display: 'flex', alignItems: 'center', gap: '14px' }}>
+        <div className="hero-floating-badge" style={{ position: 'absolute', bottom: '15%', right: '18%', background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(10px)', padding: '16px 24px', borderRadius: '24px', boxShadow: '0 20px 40px rgba(13,148,136,0.15)', border: '1px solid rgba(13,148,136,0.2)', animation: 'floatBadgeAlt 7s infinite ease-in-out', zIndex: 2, display: 'flex', alignItems: 'center', gap: '14px' }}>
            <div style={{ fontSize: '26px' }}>🛡️</div>
            <div style={{ color: 'var(--primary)', fontWeight: '800', fontSize: '15px' }}>WHO-GMP Compliant</div>
         </div>
@@ -277,7 +277,7 @@ const Certifications = () => {
               <FileCheck size={32} color="white" />
             </div>
           </div>
-          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 4vw, 36px)', marginBottom: '20px', fontWeight: '800' }}>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 4vw, 36px)', marginBottom: '20px', fontWeight: '800', color: 'white' }}>
             Need Detailed Regulatory Documentation?
           </h2>
           <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.75)', marginBottom: '40px', maxWidth: '600px', marginInline: 'auto' }}>

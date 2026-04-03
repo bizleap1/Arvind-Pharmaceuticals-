@@ -681,3 +681,38 @@ footer::before {
 .fade-in:nth-child(3) { transition-delay: 0.2s; }
 .fade-in:nth-child(4) { transition-delay: 0.3s; }
 .fade-in:nth-child(5) { transition-delay: 0.4s; }
+
+/* ─── CERTIFICATIONS & RESPONSIBILITY HERO MOBILE ─── */
+@media (max-width: 768px) {
+  /* Hide floating badges on mobile to avoid overlap */
+  .hero-floating-badge { display: none !important; }
+
+  /* Certifications hero */
+  #certifications-hero-section,
+  .certifications-hero-section,
+  .responsibility-hero-section {
+    padding: 100px 5vw 60px !important;
+    min-height: auto !important;
+    justify-content: flex-start !important;
+  }
+
+  /* Tighten hero text on mobile */
+  .certifications-hero-section h1,
+  .responsibility-hero-section h1 {
+    font-size: clamp(28px, 8vw, 40px) !important;
+    margin-bottom: 16px !important;
+  }
+
+  .certifications-hero-section p,
+  .responsibility-hero-section p {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .certifications-hero-section,
+  .responsibility-hero-section {
+    padding: 90px 6vw 50px !important;
+  }
+}
