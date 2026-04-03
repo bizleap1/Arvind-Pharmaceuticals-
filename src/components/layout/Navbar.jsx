@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import logo from '../../assets/logo.jpeg';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -7,12 +8,8 @@ const Navbar = () => {
   return (
     <>
       <nav id="navbar">
-        <Link to="/" className="nav-brand" onClick={() => setMenuOpen(false)}>
-          <div className="nav-logo-mark">A</div>
-          <div className="nav-brand-text">
-            <span className="nav-brand-name">Arvind Pharmaceuticals</span>
-            <span className="nav-brand-sub">Global Supplier & Exporter</span>
-          </div>
+        <Link to="/" className="nav-brand" onClick={() => setMenuOpen(false)} style={{ display: 'flex', alignItems: 'center', height: '72px' }}>
+          <img src={logo} alt="Arvind Pharmaceuticals Logo" style={{ height: '64px', width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', filter: 'contrast(1.1) brightness(1.05)', transform: 'scale(2)', transformOrigin: 'left center' }} />
         </Link>
         <div className="nav-links">
           <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
@@ -33,12 +30,8 @@ const Navbar = () => {
 
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`} id="mobileMenu" onClick={() => setMenuOpen(false)}>
         <div className="mobile-menu-inner" onClick={(e) => e.stopPropagation()}>
-          <div className="mobile-menu-header">
-            <div className="nav-logo-mark">A</div>
-            <div className="nav-brand-text" style={{ textAlign: 'left' }}>
-              <span className="nav-brand-name">Arvind Pharmaceuticals</span>
-              <span className="nav-brand-sub">Global Excellence</span>
-            </div>
+          <div className="mobile-menu-header" style={{ height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img src={logo} alt="Arvind Pharmaceuticals Logo" style={{ height: '56px', width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', filter: 'contrast(1.1) brightness(1.05)', transform: 'scale(1.8)', transformOrigin: 'left center' }} />
           </div>
           <div className="mobile-menu-links">
             <NavLink to="/" onClick={() => setMenuOpen(false)}>Home</NavLink>
