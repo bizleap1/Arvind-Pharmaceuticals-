@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import logo from '../../assets/logo.jpeg';
+import logo from '../../assets/logo ap.png';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,7 +9,7 @@ const Navbar = () => {
     <>
       <nav id="navbar">
         <Link to="/" className="nav-brand" onClick={() => setMenuOpen(false)} style={{ display: 'flex', alignItems: 'center', height: '72px' }}>
-          <img src={logo} alt="Arvind Pharmaceuticals Logo" style={{ height: '64px', width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', filter: 'contrast(1.1) brightness(1.05)', transform: 'scale(2)', transformOrigin: 'left center' }} />
+          <img src={logo} alt="Arvind Pharmaceuticals Logo" style={{ height: '56px', width: 'auto', objectFit: 'contain' }} />
         </Link>
         <div className="nav-links">
           <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`} id="mobileMenu" onClick={() => setMenuOpen(false)}>
         <div className="mobile-menu-inner" onClick={(e) => e.stopPropagation()}>
           <div className="mobile-menu-header" style={{ height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src={logo} alt="Arvind Pharmaceuticals Logo" style={{ height: '56px', width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', filter: 'contrast(1.1) brightness(1.05)', transform: 'scale(1.8)', transformOrigin: 'left center' }} />
+            <img src={logo} alt="Arvind Pharmaceuticals Logo" style={{ height: '48px', width: 'auto', objectFit: 'contain' }} />
           </div>
           <div className="mobile-menu-links">
             <NavLink to="/" onClick={() => setMenuOpen(false)}>Home</NavLink>
