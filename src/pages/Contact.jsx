@@ -41,7 +41,7 @@ const Contact = () => {
               <div className="contact-detail-icon">🏢</div>
               <div>
                 <h4>Corporate Headquarters</h4>
-                <span>Pune, Maharashtra, India - 411001</span>
+                <span>Nagpur, Maharashtra, India</span>
               </div>
             </div>
           </div>

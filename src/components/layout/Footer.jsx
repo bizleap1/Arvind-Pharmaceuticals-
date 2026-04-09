@@ -35,8 +35,8 @@ const Footer = () => {
           <a href="mailto:arvindpharma@gmail.com">arvindpharma@gmail.com</a>
           <a href="tel:+917057306968">+91 70573 06968</a>
           <div style={{ fontSize: '14px', marginTop: '16px', lineHeight: '1.7', color: 'rgba(255,255,255,0.5)' }}>
-            Pune, Maharashtra<br/>
-            India - 411001
+            Nagpur, Maharashtra<br/>
+            India
           </div>
         </div>
       </div>
