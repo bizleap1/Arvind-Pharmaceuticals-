@@ -16,7 +16,11 @@ import {
   Bone, 
   Baby, 
   Wind, 
-  FlaskConical 
+  FlaskConical,
+  Leaf,
+  Brain,
+  Thermometer,
+  Volume2
 } from 'lucide-react';
 
 const Products = () => {
@@ -221,6 +225,28 @@ const Products = () => {
              </p>
            </div>
          </div>
+
+         {/* Category 5 – Herbal & Ayurvedic / Nutraceutical Products (image left) */}
+         <div className="about-layout fade-in">
+           <div className="about-visual">
+             <div className="about-img-block" style={{ padding: 0, overflow: 'hidden', minHeight: '380px' }}>
+               <img src="/assets/herbal_nutraceuticals.png" alt="Herbal & Ayurvedic / Nutraceutical Products" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+             </div>
+           </div>
+           <div className="about-content">
+             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+               <div style={{ color: 'var(--secondary)' }}><Leaf size={28} /></div>
+               <span style={{ fontSize: '13px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--secondary)' }}>Category 05</span>
+             </div>
+             <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '28px', color: 'var(--primary)', marginBottom: '20px', fontWeight: '800' }}>Herbal &amp; Ayurvedic / Nutraceutical Products</h3>
+             <p style={{ color: 'var(--gray-600)', fontSize: '16px', lineHeight: '1.8', marginBottom: '16px' }}>
+               At Arvind Pharmaceuticals, we also supply a premium range of Herbal, Ayurvedic, and Nutraceutical products. These formulations combine traditional wisdom with modern scientific standards to support holistic wellness and preventive healthcare.
+             </p>
+             <p style={{ color: 'var(--gray-600)', fontSize: '16px', lineHeight: '1.8' }}>
+               Our portfolio includes high-quality dietary supplements, vitamins, and herbal extracts tailored for global consumers seeking natural health solutions. Through our disciplined sourcing network, we ensure all products meet required quality benchmarks for international markets.
+             </p>
+           </div>
+         </div>
       </section>
 
       {/* ─── THERAPEUTIC AREAS ─── */}
@@ -245,7 +271,12 @@ const Products = () => {
              { title: "Orthopaedics", icon: <Bone />, desc: "Pain management and anti-inflammatory medicines supporting bone and joint care." },
              { title: "Paediatrics", icon: <Baby />, desc: "Age-appropriate formulations for infant and child healthcare needs." },
              { title: "Respiratory", icon: <Wind />, desc: "Medicines for asthma, allergies, and respiratory tract infections." },
-             { title: "Urology", icon: <Activity />, desc: "Treatments addressing urinary tract conditions and related disorders." }
+             { title: "Urology", icon: <Activity />, desc: "Treatments addressing urinary tract conditions and related disorders." },
+             { title: "Neurology / CNS", icon: <Brain />, desc: "Medicines supporting neurological and psychiatric conditions including epilepsy, depression, and anxiety disorders." },
+             { title: "Endocrinology / Diabetology", icon: <Thermometer />, desc: "Formulations for diabetes management, thyroid disorders, and hormonal balance." },
+             { title: "Nutrition & Nutraceuticals", icon: <Leaf />, desc: "Dietary supplements, vitamins, and wellness products supporting overall health and preventive care." },
+             { title: "Pain Management", icon: <Activity />, desc: "Analgesic and anti-inflammatory formulations for acute and chronic pain conditions." },
+             { title: "ENT", icon: <Volume2 />, desc: "Products for ear, nose, and throat conditions including infections, allergies, and congestion." }
            ].map((area, index) => (
              <div key={index} className="fade-in" style={{ 
                padding: '32px', 

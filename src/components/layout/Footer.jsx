@@ -27,6 +27,7 @@ const Footer = () => {
           <Link to="/products">Generic Formulations</Link>
           <Link to="/products">Injectables</Link>
           <Link to="/products">Surgical Supplies</Link>
+          <Link to="/products">Herbal & Nutraceuticals</Link>
         </div>
         
         <div className="footer-col">
