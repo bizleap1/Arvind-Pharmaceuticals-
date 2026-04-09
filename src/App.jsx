@@ -7,6 +7,7 @@ import Products from './pages/Products';
 import Responsibility from './pages/Responsibility';
 import Certifications from './pages/Certifications';
 import Contact from './pages/Contact';
+import WhatsAppBeacon from './components/common/WhatsAppBeacon';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -36,6 +37,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <WhatsAppBeacon />
     </Router>
   );
 }

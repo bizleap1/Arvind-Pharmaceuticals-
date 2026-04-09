@@ -32,8 +32,8 @@ const Footer = () => {
         
         <div className="footer-col">
           <h5>Contact</h5>
-          <a href="mailto:export@arvindpharmaceuticals.com">export@arvindpharmaceuticals.com</a>
-          <a href="tel:+91XXXXXXXXXX">+91 XX XXXX XXXX</a>
+          <a href="mailto:arvindpharma@gmail.com">arvindpharma@gmail.com</a>
+          <a href="tel:+917057306968">+91 70573 06968</a>
           <div style={{ fontSize: '14px', marginTop: '16px', lineHeight: '1.7', color: 'rgba(255,255,255,0.5)' }}>
             Pune, Maharashtra<br/>
             India - 411001

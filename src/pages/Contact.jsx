@@ -27,14 +27,14 @@ const Contact = () => {
               <div className="contact-detail-icon">✉️</div>
               <div>
                 <h4>Global Sales & Inquiries</h4>
-                <a href="mailto:export@arvindpharmaceuticals.com">export@arvindpharmaceuticals.com</a>
+                <a href="mailto:arvindpharma@gmail.com">arvindpharma@gmail.com</a>
               </div>
             </div>
             <div className="contact-detail">
               <div className="contact-detail-icon">📞</div>
               <div>
                 <h4>Export Division Helpline</h4>
-                <a href="tel:+91XXXXXXXXXX">+91 XX XXXX XXXX</a>
+                <a href="tel:+917057306968">+91 70573 06968</a>
               </div>
             </div>
             <div className="contact-detail">
