@@ -14,10 +14,10 @@ const WhatsAppBeacon = () => {
       className="whatsapp-beacon"
       aria-label="Contact us on WhatsApp"
     >
+      <span className="whatsapp-tooltip">Chat with us</span>
       <div className="whatsapp-icon-wrapper">
         <MessageCircle size={32} fill="currentColor" />
       </div>
-      <span className="whatsapp-tooltip">Chat with us</span>
     </a>
   );
 };
