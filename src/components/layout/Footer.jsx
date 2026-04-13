@@ -32,11 +32,12 @@ const Footer = () => {
         
         <div className="footer-col">
           <h5>Contact</h5>
-          <a href="mailto:arvindpharma@gmail.com">arvindpharma@gmail.com</a>
+          <a href="mailto:gauravnasare2809@gmail.com">gauravnasare2809@gmail.com</a>
           <a href="tel:+917057306968">+91 70573 06968</a>
           <div style={{ fontSize: '14px', marginTop: '16px', lineHeight: '1.7', color: 'rgba(255,255,255,0.5)' }}>
-            Nagpur, Maharashtra<br/>
-            India
+            Shop No. F-102, Gauri Meadows-3,<br/>
+            Plot No. 81, Besa Road,<br/>
+            Nagpur, Maharashtra, India
           </div>
         </div>
       </div>

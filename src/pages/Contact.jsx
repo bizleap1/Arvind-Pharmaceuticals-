@@ -27,7 +27,7 @@ const Contact = () => {
               <div className="contact-detail-icon">✉️</div>
               <div>
                 <h4>Global Sales & Inquiries</h4>
-                <a href="mailto:arvindpharma@gmail.com">arvindpharma@gmail.com</a>
+                <a href="mailto:gauravnasare2809@gmail.com">gauravnasare2809@gmail.com</a>
               </div>
             </div>
             <div className="contact-detail">
@@ -40,8 +40,8 @@ const Contact = () => {
             <div className="contact-detail">
               <div className="contact-detail-icon">🏢</div>
               <div>
-                <h4>Corporate Headquarters</h4>
-                <span>Nagpur, Maharashtra, India</span>
+                <h4>Registered Address</h4>
+                <span>Shop No. F-102, Gauri Meadows-3,<br/>Plot No. 81, Besa Road,<br/>Nagpur, Maharashtra, India</span>
               </div>
             </div>
           </div>

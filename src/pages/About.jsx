@@ -148,19 +148,20 @@ const About = () => {
         <div className="about-layout">
            <div className="about-visual fade-in">
               <div className="why-card" style={{ padding: '16px', border: 'none', background: 'transparent' }}>
-                 <div style={{ 
-                   aspectRatio: '1', 
-                   background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%)', 
-                   borderRadius: '32px',
-                   display: 'flex',
-                   alignItems: 'center',
-                   justifyContent: 'center',
-                   fontSize: '120px',
-                   color: 'white',
-                   fontWeight: 800,
-                   fontFamily: 'var(--font-display)',
-                   boxShadow: '0 24px 48px rgba(27,54,93,0.2)'
-                 }}>GN</div>
+                 <div style={{ position: 'relative', borderRadius: '32px', overflow: 'hidden', boxShadow: '0 24px 48px rgba(27,54,93,0.25)' }}>
+                   <img
+                     src="/assets/gaurav-nasare.jpg"
+                     alt="Mr. Gaurav Nasare – Founder & Director, Arvind Pharmaceuticals"
+                     style={{
+                       width: '100%',
+                       display: 'block',
+                       borderRadius: '32px',
+                       objectFit: 'cover',
+                       aspectRatio: '4/5'
+                     }}
+                   />
+                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(27,54,93,0.35) 0%, transparent 60%)', borderRadius: '32px', pointerEvents: 'none' }}></div>
+                 </div>
               </div>
            </div>
            <div className="about-content fade-in">
